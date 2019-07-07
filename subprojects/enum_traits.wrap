@@ -1,0 +1,4 @@
+[wrap-git]
+directory = enum_traits
+url = https://github.com/willwray/enum_traits
+revision = v0.1

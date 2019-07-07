@@ -1,0 +1,4 @@
+[wrap-git]
+directory = ntbs
+url = https://github.com/willwray/ntbs
+revision = v0.1
