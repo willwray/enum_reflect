@@ -70,3 +70,17 @@ MSVC currently fails to reflect duplicate-value enumerators).
 * It looks like the full range of a 32-bit underlying value is checked.  
 Can this be true?  
 No; read the docs.
+
+----
+
+## Build
+
+Meson build script provided, e.g. use with ninja backend  
+(Meson will clone the three dependency repos, assuming network access).
+
+```bash
+meson build
+ninja -C build
+```
+[![Build Status](https://travis-ci.org/willwray/enum_traits.svg?branch=master)](https://travis-ci.org/willwray/enum_traits)  
+Linux Travis gcc-9, clang-7-libc++, -std=c++17
