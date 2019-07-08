@@ -1,7 +1,7 @@
 #include <iostream>
 #include "enumio.hpp"
 
-enum class X { Alicia=0, Boole, Bool=Boole, Stott, Doe=0xFF,
+enum class X { Alicia, Boole, Bool=Boole, Stott, Doe=0xFF,
                Min16 = INT16_MIN, Max16 = INT16_MAX,
                Min32 = INT32_MIN, Max32 = INT32_MAX };
 

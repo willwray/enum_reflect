@@ -73,10 +73,12 @@ struct enumerators_t
 template <typename E, format f, char... seps>
 inline constexpr auto enumerators = enumerators_t<E,f,seps...>::str();
 
-template <typename E, format f = id_eq_dec, char... s>
+template <typename E, bool DecOrHex = true, char... s>
 inline constexpr auto enum_declaration = []
 {
     using U = std::underlying_type_t<E>;
+    constexpr format f = DecOrHex ? id_eq_dec : id_eq_hex;
+
     constexpr auto ul_type_name = ltl::type_name_pp<U>;
     constexpr bool fixed = ltl::is_fixed_enum_v<E> && ! std::is_same_v<U,int>;
     constexpr auto uqname = ltl::type_name_pu<E>;
